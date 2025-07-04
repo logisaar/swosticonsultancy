@@ -134,10 +134,10 @@ const Homepage: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
-              <h2 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+              <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
                 Trusted Chartered Accountancy & 
                 <span className="text-ca-gold"> Tax Services</span>
-              </h2>
+              </h1>
               <p className="text-xl lg:text-2xl mb-4 text-primary-foreground/90">
                 For Individuals and Businesses
               </p>
