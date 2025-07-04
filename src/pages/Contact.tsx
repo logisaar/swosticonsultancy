@@ -99,7 +99,7 @@ const Contact: React.FC = () => {
     <SEO 
       title="Contact Us - Swosti Consultancy"
       description="Get in touch with our expert team for professional Chartered Accountancy services. We're here to help you with all your financial needs."
-      keywords="Contact CA, Chartered Accountant Bhubaneswar, Tax Services, Financial Advisory, NRI Services"
+      keywords="Swosti Consultancy, Contact CA, Chartered Accountant Bhubaneswar, Tax Services, Financial Advisory, NRI Services"
       canonical="/contact"
       ogImage="/images/contact-hero.jpg"
     />

@@ -1,4 +1,4 @@
-# Project: swosticonsultancy
+# Project: Swosticonsultancy
 # Description: A modern web application for Mishra Accountancy, providing professional accountancy and consultancy services.
 # Built with React, TypeScript, Tailwind CSS, and shadcn-ui.
 # Features: Service listings, testimonials, contact forms, blog, FAQs, and more.

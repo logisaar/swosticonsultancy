@@ -124,7 +124,7 @@ const Services: React.FC = () => {
       <SEO 
         title="Professional CA Services - Swosti Consultancy"
         description="Explore our comprehensive Chartered Accountancy services including taxation, auditing, business registration, and financial advisory. Contact us for a free consultation."
-        keywords="Chartered Accountant, Tax Services, Bhubaneswar, ITR Filing, GST Compliance, Business Registration"
+        keywords="Swosti Consultancy, Chartered Accountant, Tax Services, Bhubaneswar, ITR Filing, GST Compliance, Business Registration"
         canonical="/services"
         ogImage="/images/services-hero.jpg"
       />

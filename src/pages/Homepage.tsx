@@ -123,7 +123,7 @@ const Homepage: React.FC = () => {
       <SEO 
         title="Homepage - Swosti Consultancy"
         description="Professional Chartered Accountancy and Tax Services in Bhubaneshwar. Over 27 years of experience in taxation, audit, and business advisory."
-        keywords="Chartered Accountant, Tax Services, Bhubaneshwar, ITR Filing, GST Compliance, Business Registration"
+        keywords="Swosti Consultancy,Chartered Accountant, Tax Services, Bhubaneshwar, ITR Filing, GST Compliance, Business Registration"
         canonical="/"
         ogImage="/images/abinash-mishra-portrait.jpg"
       />

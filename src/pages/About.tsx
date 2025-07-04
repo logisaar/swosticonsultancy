@@ -36,7 +36,7 @@ const About: React.FC = () => {
       <SEO
         title="About Us - Swosti Consultancy"
         description="Learn about CA Abinash Mishra, our mission, vision, and the journey of excellence in Chartered Accountancy services."
-        keywords="CA Bhubaneswar, Chartered Accountant Odisha, Abinash Mishra & Co., About Us"
+        keywords="Swosti Consultancy, CA Bhubaneswar, Chartered Accountant Odisha, Swosti Consultancy, About Us"
         canonical="/about"
         ogImage="/images/abinash-mishra-about.jpg"
       />
