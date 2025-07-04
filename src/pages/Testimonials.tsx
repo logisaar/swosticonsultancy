@@ -123,12 +123,12 @@ const Testimonials: React.FC = () => {
 
   return (
     <>
-      <SEO 
-        title="Client Testimonials - Swosti Consultancy"
-        description="Read what our satisfied clients have to say about our professional Chartered Accountancy services and expertise. Discover how we can help your business thrive."
-        keywords="Testimonials, Chartered Accountant, CA Services, Bhubaneswar, Swosti Consultancy, Client Reviews"
+      <SEO
+        title="Client Testimonials - Best CA in Bhubaneswar | Swosti Consultancy"
+        description="Read real client testimonials and reviews for Swosti Consultancy, the best CA in Bhubaneswar. See how we help clients with income tax, GST, company audit, digital signature, labour law, professional tax, ESI, EPF, TDS, tax refund, and more."
+        keywords="Swosti Consultancy reviews, client testimonials, CA Bhubaneswar, best CA Odisha, income tax consultant, GST consultant, company audit, digital signature, labour consultant, professional tax, ESI, EPF, TDS, tax refund"
         canonical="/testimonials"
-        ogImage="/images/testimonials-hero.jpg"
+        ogImage="/images/faqs-hero.jpg"
       />
     <div className="min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

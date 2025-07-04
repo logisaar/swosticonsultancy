@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Link } from 'react-router-dom';
+import { Helmet } from "react-helmet";
 
 const FAQs: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -105,12 +106,31 @@ const FAQs: React.FC = () => {
   return (
     <>
       <SEO 
-        title="FAQs - Swosti Consultancy"
-        description="Find answers to common questions about taxation, compliance, business registration, and other CA services. Can't find what you're looking for? Contact our experts."
-        keywords="Swosti Consultancy, FAQs, Chartered Accountant, Tax Services, Bhubaneswar, ITR Filing, GST Compliance"
-        canonical="/faqs"
+        title="FAQs - Best CA in Bhubaneswar | Income Tax, GST, Audit, Digital Signature, Labour, Professional Tax, ESI, EPF, TDS, Tax Refund"
+        description="Find answers to common questions about income tax, GST, company audit, private limited, digital signature, labour consultancy, professional tax, ESI, EPF, TDS, tax refund, and more. Swosti Consultancy is the best CA in Bhubaneswar. Contact our experts for personalized help."
+        keywords="Best CA in Bhubaneswar, Income Tax Consultant, GST Consultant, Company Audit, Private Limited, Digital Signature, Labour Consultant, Professional Tax Consultant, ESI, EPF, Tax Consultant, TDS Consultant, Tax Refund Consultant, Chartered Accountant Odisha, Swosti Consultancy"
+        canonical="https://www.swosticonsultancy.com/faqs"
         ogImage="/images/faqs-hero.jpg"
       />
+      {/* FAQPage Schema.org Structured Data */}
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "@id": "https://www.swosticonsultancy.com/faqs#faqpage",
+            "url": "https://www.swosticonsultancy.com/faqs",
+            "mainEntity": faqData.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer + `\n\nIf you need expert help with ${faq.category.toLowerCase()} or are searching for the best CA in Bhubaneswar, contact Swosti Consultancy for a free consultation.`
+              }
+            }))
+          })}
+        </script>
+      </Helmet>
       <div className="min-h-screen py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}

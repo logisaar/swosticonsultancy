@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
+import { Helmet } from 'react-helmet';
 
 const Blog: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -116,13 +117,38 @@ const Blog: React.FC = () => {
 
   return (
     <>
-      <SEO 
-        title="Blog - Swosti Consultancy"
-        description="Explore our blog for the latest insights, tips, and updates on taxation, compliance, and financial management from our expert CA team."
-        keywords="Swosti Consultancy, Chartered Accountant Blog, Tax Tips, GST Updates, Business Registration, NRI Services"
-        canonical="/blog"
-        ogImage="/images/blog-hero.jpg"
+      <SEO
+        title="Blog - Swosti Consultancy | Tax, GST, Company Audit, Digital Signature, Labour, Professional Tax, ESI, EPF, TDS, Tax Refund"
+        description="Read expert articles and tips on income tax, GST, company audit, private limited, digital signature, labour law, professional tax, ESI, EPF, TDS, tax refund, and more from Swosti Consultancy, the best CA in Bhubaneswar."
+        keywords="Swosti Consultancy blog, tax tips, GST advice, company audit, digital signature, labour consultant, professional tax, ESI, EPF, TDS, tax refund, CA Bhubaneswar, Chartered Accountant Odisha"
+        canonical="https://www.swosticonsultancy.com/blog"
+        ogImage="/images/faqs-hero.jpg"
       />
+      {/* BlogPosting Schema.org Structured Data */}
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "@id": "https://www.swosticonsultancy.com/blog#blog",
+            "url": "https://www.swosticonsultancy.com/blog",
+            "name": "Swosti Consultancy Blog",
+            "description": "Expert articles and tips on income tax, GST, company audit, private limited, digital signature, labour law, professional tax, ESI, EPF, TDS, tax refund, and more from Swosti Consultancy, the best CA in Bhubaneswar.",
+            "blogPost": blogPosts.map(post => ({
+              "@type": "BlogPosting",
+              "headline": post.title,
+              "description": post.excerpt,
+              "author": {
+                "@type": "Person",
+                "name": post.author
+              },
+              "datePublished": post.date,
+              "url": `https://www.swosticonsultancy.com/blog/${post.id}`,
+              "keywords": post.tags.join(", ")
+            }))
+          })}
+        </script>
+      </Helmet>
     <div className="min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
