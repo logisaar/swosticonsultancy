@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SEO from "../components/Seo";
 import { Link } from 'react-router-dom';
 import { Calendar, User, ArrowRight, Search, Tag, Clock } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -114,6 +115,14 @@ const Blog: React.FC = () => {
   const recentPosts = blogPosts.slice(0, 5);
 
   return (
+    <>
+      <SEO 
+        title="Blog - Swosti Consultancy"
+        description="Explore our blog for the latest insights, tips, and updates on taxation, compliance, and financial management from our expert CA team."
+        keywords="Chartered Accountant Blog, Tax Tips, GST Updates, Business Registration, NRI Services"
+        canonical="/blog"
+        ogImage="/images/blog-hero.jpg"
+      />
     <div className="min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
@@ -368,6 +377,7 @@ const Blog: React.FC = () => {
         </section>
       </div>
     </div>
+    </>
   );
 };
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from "../components/Seo";
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { 
   Calculator, 
@@ -565,6 +566,14 @@ const ServiceDetail: React.FC = () => {
   };
 
   return (
+    <>
+      <SEO 
+        title={`${service.title} - Professional CA Services in Bhubaneswar`}
+        description={service.description}
+        keywords={`${service.title}, CA Services, Bhubaneswar, Chartered Accountant, ${service.subtitle}`}
+        canonical={`/services/${serviceId}`}
+        ogImage={service.heroImage}
+      />
     <div className="min-h-screen py-12">
       {/* SEO optimized meta information would be handled by helmet or similar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -872,6 +881,7 @@ const ServiceDetail: React.FC = () => {
         </section>
       </div>
     </div>
+    </>
   );
 };
 

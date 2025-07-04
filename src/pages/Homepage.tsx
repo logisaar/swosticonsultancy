@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import SEO from "../components/Seo";
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
@@ -118,6 +119,14 @@ const Homepage: React.FC = () => {
   }, [testimonials.length]);
 
   return (
+    <>
+      <SEO 
+        title="Homepage - Swosti Consultancy"
+        description="Professional Chartered Accountancy and Tax Services in Bhubaneshwar. Over 27 years of experience in taxation, audit, and business advisory."
+        keywords="Chartered Accountant, Tax Services, Bhubaneshwar, ITR Filing, GST Compliance, Business Registration"
+        canonical="/"
+        ogImage="/images/abinash-mishra-portrait.jpg"
+      />
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative bg-gradient-hero text-primary-foreground py-20 overflow-hidden">
@@ -125,10 +134,10 @@ const Homepage: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
-              <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+              <h2 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
                 Trusted Chartered Accountancy & 
                 <span className="text-ca-gold"> Tax Services</span>
-              </h1>
+              </h2>
               <p className="text-xl lg:text-2xl mb-4 text-primary-foreground/90">
                 For Individuals and Businesses
               </p>
@@ -364,7 +373,7 @@ const Homepage: React.FC = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
-
 export default Homepage;

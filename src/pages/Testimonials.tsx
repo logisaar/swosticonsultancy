@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SEO from "../components/Seo";
 import { Star, Quote, Filter, ArrowRight } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -121,6 +122,14 @@ const Testimonials: React.FC = () => {
   const totalTestimonials = testimonials.length;
 
   return (
+    <>
+      <SEO 
+        title="Client Testimonials - Swosti Consultancy"
+        description="Read what our satisfied clients have to say about our professional Chartered Accountancy services and expertise. Discover how we can help your business thrive."
+        keywords="Testimonials, Chartered Accountant, CA Services, Bhubaneswar, Client Reviews"
+        canonical="/testimonials"
+        ogImage="/images/testimonials-hero.jpg"
+      />
     <div className="min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
@@ -293,6 +302,7 @@ const Testimonials: React.FC = () => {
         </section>
       </div>
     </div>
+    </>
   );
 };
 

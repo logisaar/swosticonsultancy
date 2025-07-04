@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SEO from "../components/Seo";
 import { Search, ChevronDown, ChevronUp, MessageCircle } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -102,72 +103,106 @@ const FAQs: React.FC = () => {
   const popularFAQs = faqData.filter(faq => faq.popular);
 
   return (
-    <div className="min-h-screen py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl lg:text-5xl font-bold text-primary mb-6">
-            Frequently Asked Questions
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Find answers to common questions about taxation, compliance, business registration, 
-            and other CA services. Can't find what you're looking for? Contact our experts.
-          </p>
-        </div>
-
-        {/* Search and Filter */}
-        <div className="mb-12">
-          <div className="flex flex-col lg:flex-row gap-6 mb-8">
-            <div className="flex-1">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5" />
-                <Input
-                  type="text"
-                  placeholder="Search FAQs..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="pl-10"
-                />
-              </div>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
-                <Button
-                  key={category}
-                  variant={selectedCategory === category ? "professional" : "outline"}
-                  size="sm"
-                  onClick={() => setSelectedCategory(category)}
-                >
-                  {category}
-                </Button>
-              ))}
-            </div>
+    <>
+      <SEO 
+        title="FAQs - Swosti Consultancy"
+        description="Find answers to common questions about taxation, compliance, business registration, and other CA services. Can't find what you're looking for? Contact our experts."
+        keywords="FAQs, Chartered Accountant, Tax Services, Bhubaneswar, ITR Filing, GST Compliance"
+        canonical="/faqs"
+        ogImage="/images/faqs-hero.jpg"
+      />
+      <div className="min-h-screen py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Hero Section */}
+          <div className="text-center mb-16">
+            <h1 className="text-4xl lg:text-5xl font-bold text-primary mb-6">
+              Frequently Asked Questions
+            </h1>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Find answers to common questions about taxation, compliance, business registration, 
+              and other CA services. Can't find what you're looking for? Contact our experts.
+            </p>
           </div>
 
-          <p className="text-muted-foreground text-center">
-            Showing {filteredFAQs.length} of {faqData.length} questions
-            {searchTerm && ` for "${searchTerm}"`}
-            {selectedCategory !== 'All' && ` in ${selectedCategory}`}
-          </p>
-        </div>
+          {/* Search and Filter */}
+          <div className="mb-12">
+            <div className="flex flex-col lg:flex-row gap-6 mb-8">
+              <div className="flex-1">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5" />
+                  <Input
+                    type="text"
+                    placeholder="Search FAQs..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="pl-10"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {categories.map((category) => (
+                  <Button
+                    key={category}
+                    variant={selectedCategory === category ? "professional" : "outline"}
+                    size="sm"
+                    onClick={() => setSelectedCategory(category)}
+                  >
+                    {category}
+                  </Button>
+                ))}
+              </div>
+            </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          {/* Main FAQ Content */}
-          <div className="lg:col-span-2">
-            {/* Popular FAQs */}
-            {selectedCategory === 'All' && searchTerm === '' && (
-              <section className="mb-12">
-                <h2 className="text-2xl font-bold text-primary mb-6 flex items-center">
-                  <span>Popular Questions</span>
-                  <Badge className="ml-3 bg-ca-gold text-foreground">Most Asked</Badge>
+            <p className="text-muted-foreground text-center">
+              Showing {filteredFAQs.length} of {faqData.length} questions
+              {searchTerm && ` for "${searchTerm}"`}
+              {selectedCategory !== 'All' && ` in ${selectedCategory}`}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            {/* Main FAQ Content */}
+            <div className="lg:col-span-2">
+              {/* Popular FAQs */}
+              {selectedCategory === 'All' && searchTerm === '' && (
+                <section className="mb-12">
+                  <h2 className="text-2xl font-bold text-primary mb-6 flex items-center">
+                    <span>Popular Questions</span>
+                    <Badge className="ml-3 bg-ca-gold text-foreground">Most Asked</Badge>
+                  </h2>
+                  <Accordion type="single" collapsible className="space-y-4">
+                    {popularFAQs.map((faq) => (
+                      <AccordionItem key={faq.id} value={`popular-${faq.id}`} className="border border-border rounded-lg shadow-ca-sm">
+                        <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/30 rounded-lg">
+                          <div className="flex items-center space-x-3 text-left">
+                            <Badge variant="outline" className="text-xs">{faq.category}</Badge>
+                            <span className="font-medium">{faq.question}</span>
+                          </div>
+                        </AccordionTrigger>
+                        <AccordionContent className="px-6 pb-4">
+                          <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </section>
+              )}
+
+              {/* All FAQs */}
+              <section>
+                <h2 className="text-2xl font-bold text-primary mb-6">
+                  {searchTerm || selectedCategory !== 'All' ? 'Search Results' : 'All Questions'}
                 </h2>
                 <Accordion type="single" collapsible className="space-y-4">
-                  {popularFAQs.map((faq) => (
-                    <AccordionItem key={faq.id} value={`popular-${faq.id}`} className="border border-border rounded-lg shadow-ca-sm">
+                  {filteredFAQs.map((faq) => (
+                    <AccordionItem key={faq.id} value={`faq-${faq.id}`} className="border border-border rounded-lg shadow-ca-sm">
                       <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/30 rounded-lg">
                         <div className="flex items-center space-x-3 text-left">
                           <Badge variant="outline" className="text-xs">{faq.category}</Badge>
                           <span className="font-medium">{faq.question}</span>
+                          {faq.popular && (
+                            <Badge className="bg-ca-gold text-foreground text-xs">Popular</Badge>
+                          )}
                         </div>
                       </AccordionTrigger>
                       <AccordionContent className="px-6 pb-4">
@@ -176,142 +211,117 @@ const FAQs: React.FC = () => {
                     </AccordionItem>
                   ))}
                 </Accordion>
+
+                {filteredFAQs.length === 0 && (
+                  <Card className="shadow-ca-md">
+                    <CardContent className="p-12 text-center">
+                      <MessageCircle className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
+                      <h3 className="text-xl font-semibold text-primary mb-2">No results found</h3>
+                      <p className="text-muted-foreground mb-6">
+                        We couldn't find any FAQs matching your search. Try different keywords or contact us directly.
+                      </p>
+                      <Button variant="professional" asChild>
+                        <Link to="/contact">Contact Our Experts</Link>
+                      </Button>
+                    </CardContent>
+                  </Card>
+                )}
               </section>
-            )}
+            </div>
 
-            {/* All FAQs */}
-            <section>
-              <h2 className="text-2xl font-bold text-primary mb-6">
-                {searchTerm || selectedCategory !== 'All' ? 'Search Results' : 'All Questions'}
-              </h2>
-              <Accordion type="single" collapsible className="space-y-4">
-                {filteredFAQs.map((faq) => (
-                  <AccordionItem key={faq.id} value={`faq-${faq.id}`} className="border border-border rounded-lg shadow-ca-sm">
-                    <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/30 rounded-lg">
-                      <div className="flex items-center space-x-3 text-left">
-                        <Badge variant="outline" className="text-xs">{faq.category}</Badge>
-                        <span className="font-medium">{faq.question}</span>
-                        {faq.popular && (
-                          <Badge className="bg-ca-gold text-foreground text-xs">Popular</Badge>
-                        )}
-                      </div>
-                    </AccordionTrigger>
-                    <AccordionContent className="px-6 pb-4">
-                      <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-
-              {filteredFAQs.length === 0 && (
+            {/* Sidebar */}
+            <div className="lg:col-span-1">
+              <div className="space-y-8">
+                {/* Quick Categories */}
                 <Card className="shadow-ca-md">
-                  <CardContent className="p-12 text-center">
-                    <MessageCircle className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold text-primary mb-2">No results found</h3>
-                    <p className="text-muted-foreground mb-6">
-                      We couldn't find any FAQs matching your search. Try different keywords or contact us directly.
-                    </p>
-                    <Button variant="professional" asChild>
-                      <Link to="/contact">Contact Our Experts</Link>
-                    </Button>
+                  <CardContent className="p-6">
+                    <h3 className="text-lg font-semibold text-primary mb-4">Browse by Category</h3>
+                    <div className="space-y-2">
+                      {categories.slice(1).map((category) => (
+                        <Button
+                          key={category}
+                          variant={selectedCategory === category ? "professional" : "ghost"}
+                          size="sm"
+                          className="w-full justify-between"
+                          onClick={() => setSelectedCategory(category)}
+                        >
+                          <span>{category}</span>
+                          <span className="text-xs">
+                            {faqData.filter(faq => faq.category === category).length}
+                          </span>
+                        </Button>
+                      ))}
+                    </div>
                   </CardContent>
                 </Card>
-              )}
-            </section>
-          </div>
 
-          {/* Sidebar */}
-          <div className="lg:col-span-1">
-            <div className="space-y-8">
-              {/* Quick Categories */}
-              <Card className="shadow-ca-md">
-                <CardContent className="p-6">
-                  <h3 className="text-lg font-semibold text-primary mb-4">Browse by Category</h3>
-                  <div className="space-y-2">
-                    {categories.slice(1).map((category) => (
-                      <Button
-                        key={category}
-                        variant={selectedCategory === category ? "professional" : "ghost"}
-                        size="sm"
-                        className="w-full justify-between"
-                        onClick={() => setSelectedCategory(category)}
-                      >
-                        <span>{category}</span>
-                        <span className="text-xs">
-                          {faqData.filter(faq => faq.category === category).length}
-                        </span>
+                {/* Contact Support */}
+                <Card className="shadow-ca-md bg-gradient-card">
+                  <CardContent className="p-6 text-center">
+                    <MessageCircle className="w-12 h-12 text-primary mx-auto mb-4" />
+                    <h3 className="text-lg font-semibold text-primary mb-2">Still Need Help?</h3>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Can't find the answer you're looking for? Our expert CA team is here to help.
+                    </p>
+                    <div className="space-y-3">
+                      <Button variant="professional" size="sm" className="w-full" asChild>
+                        <Link to="/contact">Contact Us</Link>
                       </Button>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+                      <Button variant="outline" size="sm" className="w-full">
+                        <a href="tel:+918401539713">Call: +91 84015 39713</a>
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
 
-              {/* Contact Support */}
-              <Card className="shadow-ca-md bg-gradient-card">
-                <CardContent className="p-6 text-center">
-                  <MessageCircle className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold text-primary mb-2">Still Need Help?</h3>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Can't find the answer you're looking for? Our expert CA team is here to help.
-                  </p>
-                  <div className="space-y-3">
-                    <Button variant="professional" size="sm" className="w-full" asChild>
-                      <Link to="/contact">Contact Us</Link>
-                    </Button>
-                    <Button variant="outline" size="sm" className="w-full">
-                      <a href="tel:+918401539713">Call: +91 84015 39713</a>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Popular Topics */}
-              <Card className="shadow-ca-md">
-                <CardContent className="p-6">
-                  <h3 className="text-lg font-semibold text-primary mb-4">Popular Topics</h3>
-                  <div className="space-y-3">
-                    {[
-                      'ITR Filing Deadline',
-                      'GST Registration',
-                      'Company Registration',
-                      'Tax Saving Tips',
-                      'NRI Taxation',
-                      'Audit Requirements'
-                    ].map((topic, index) => (
-                      <div key={index} className="flex items-center space-x-2 text-sm">
-                        <div className="w-2 h-2 bg-primary rounded-full"></div>
-                        <span className="text-foreground hover:text-primary cursor-pointer transition-colors">
-                          {topic}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+                {/* Popular Topics */}
+                <Card className="shadow-ca-md">
+                  <CardContent className="p-6">
+                    <h3 className="text-lg font-semibold text-primary mb-4">Popular Topics</h3>
+                    <div className="space-y-3">
+                      {[
+                        'ITR Filing Deadline',
+                        'GST Registration',
+                        'Company Registration',
+                        'Tax Saving Tips',
+                        'NRI Taxation',
+                        'Audit Requirements'
+                      ].map((topic, index) => (
+                        <div key={index} className="flex items-center space-x-2 text-sm">
+                          <div className="w-2 h-2 bg-primary rounded-full"></div>
+                          <span className="text-foreground hover:text-primary cursor-pointer transition-colors">
+                            {topic}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* CTA Section */}
-        <section className="mt-16 text-center bg-gradient-card p-12 rounded-2xl">
-          <h2 className="text-3xl font-bold text-primary mb-4">
-            Need Personalized Guidance?
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            While our FAQs cover common questions, every situation is unique. 
-            Get personalized advice from our expert CA team for your specific needs.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="cta" size="xl" asChild>
-              <Link to="/contact">Schedule Free Consultation</Link>
-            </Button>
-            <Button variant="outline" size="xl" asChild>
-              <Link to="/services">View Our Services</Link>
-            </Button>
-          </div>
-        </section>
+          {/* CTA Section */}
+          <section className="mt-16 text-center bg-gradient-card p-12 rounded-2xl">
+            <h2 className="text-3xl font-bold text-primary mb-4">
+              Need Personalized Guidance?
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              While our FAQs cover common questions, every situation is unique. 
+              Get personalized advice from our expert CA team for your specific needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="cta" size="xl" asChild>
+                <Link to="/contact">Schedule Free Consultation</Link>
+              </Button>
+              <Button variant="outline" size="xl" asChild>
+                <Link to="/services">View Our Services</Link>
+              </Button>
+            </div>
+          </section>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SEO from "../components/Seo";
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -94,6 +95,14 @@ const Contact: React.FC = () => {
   ];
 
   return (
+    <>
+    <SEO 
+      title="Contact Us - Swosti Consultancy"
+      description="Get in touch with our expert team for professional Chartered Accountancy services. We're here to help you with all your financial needs."
+      keywords="Contact CA, Chartered Accountant Bhubaneswar, Tax Services, Financial Advisory, NRI Services"
+      canonical="/contact"
+      ogImage="/images/contact-hero.jpg"
+    />
     <div className="min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
@@ -359,6 +368,7 @@ const Contact: React.FC = () => {
         </section>
       </div>
     </div>
+    </>
   );
 };
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from "../components/Seo";
 import { Link } from 'react-router-dom';
 import { 
   Calculator, 
@@ -119,6 +120,14 @@ const Services: React.FC = () => {
   ];
 
   return (
+    <>
+      <SEO 
+        title="Professional CA Services - Swosti Consultancy"
+        description="Explore our comprehensive Chartered Accountancy services including taxation, auditing, business registration, and financial advisory. Contact us for a free consultation."
+        keywords="Chartered Accountant, Tax Services, Bhubaneswar, ITR Filing, GST Compliance, Business Registration"
+        canonical="/services"
+        ogImage="/images/services-hero.jpg"
+      />
     <div className="min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
@@ -324,6 +333,7 @@ const Services: React.FC = () => {
         </section>
       </div>
     </div>
+    </>
   );
 };
 

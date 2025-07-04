@@ -34,7 +34,7 @@ const Header: React.FC = () => {
               <span className="text-xl font-bold text-primary-foreground">AM</span>
             </div>
             <div>
-              <h1 className="text-xl font-bold text-primary">Abinash Mishra & Co.</h1>
+              <h1 className="text-xl font-bold text-primary">Swosti Consultancy</h1>
               <p className="text-xs text-muted-foreground">Chartered Accountants</p>
             </div>
           </Link>

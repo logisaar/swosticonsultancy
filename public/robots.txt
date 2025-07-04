@@ -19,13 +19,6 @@ Allow: /
 User-agent: *
 Allow: /
 
-Key features and structure:
 
-Frontend: Built using React and TypeScript for type safety and component-based architecture.
-Styling: Uses Tailwind CSS for utility-first styling and shadcn-ui for accessible UI components.
-Routing/Pages: The pages directory contains pages like Homepage, About, Services, Contact, Blog, FAQs, and more, indicating a multi-page informational site.
-Components: The components folder includes reusable UI components such as Header, Footer, Layout, LocationMap, and others.
-Assets: Images and other static assets are stored in assets.
-SEO: The robots.txt file allows all major search engine bots to crawl the site, supporting discoverability.
-Development: Uses Vite for fast development and build processes. Scripts for development, building, linting, and previewing are defined in package.json.
+
 Sitemap: https://www.swosticonsultancy.com/sitemap.xml 
