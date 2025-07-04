@@ -319,6 +319,11 @@ const FAQs: React.FC = () => {
               </Button>
             </div>
           </section>
+           <div className="mt-10 text-center">
+            <Button variant="professional" size="lg" asChild>
+              <Link to="/new-page">Go to New Page</Link>
+            </Button>
+          </div>
         </div>
       </div>
     </>
