@@ -35,10 +35,10 @@ const Footer: React.FC = () => {
           <div className="col-span-1 lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center shadow-ca-md">
-                <span className="text-xl font-bold text-primary-foreground">AM</span>
+                <span className="text-xl font-bold text-primary-foreground">SC</span>
               </div>
               <div>
-                <h3 className="text-lg font-bold">Abinash Mishra & Co.</h3>
+                <h3 className="text-lg font-bold">Swosti Consultancy</h3>
                 <p className="text-sm text-background/70">Chartered Accountants</p>
               </div>
             </div>

@@ -126,7 +126,7 @@ const Testimonials: React.FC = () => {
       <SEO 
         title="Client Testimonials - Swosti Consultancy"
         description="Read what our satisfied clients have to say about our professional Chartered Accountancy services and expertise. Discover how we can help your business thrive."
-        keywords="Testimonials, Chartered Accountant, CA Services, Bhubaneswar, Client Reviews"
+        keywords="Testimonials, Chartered Accountant, CA Services, Bhubaneswar, Swosti Consultancy, Client Reviews"
         canonical="/testimonials"
         ogImage="/images/testimonials-hero.jpg"
       />

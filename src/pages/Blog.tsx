@@ -119,7 +119,7 @@ const Blog: React.FC = () => {
       <SEO 
         title="Blog - Swosti Consultancy"
         description="Explore our blog for the latest insights, tips, and updates on taxation, compliance, and financial management from our expert CA team."
-        keywords="Chartered Accountant Blog, Tax Tips, GST Updates, Business Registration, NRI Services"
+        keywords="Swosti Consultancy, Chartered Accountant Blog, Tax Tips, GST Updates, Business Registration, NRI Services"
         canonical="/blog"
         ogImage="/images/blog-hero.jpg"
       />

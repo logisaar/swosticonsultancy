@@ -27,7 +27,7 @@ const LocationMap: React.FC = () => {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Abinash Mishra & Co. Office Location"
+                title="Swosti Consultancy Office Location"
               ></iframe>
             </div>
           </div>

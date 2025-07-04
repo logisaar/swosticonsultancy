@@ -107,7 +107,7 @@ const FAQs: React.FC = () => {
       <SEO 
         title="FAQs - Swosti Consultancy"
         description="Find answers to common questions about taxation, compliance, business registration, and other CA services. Can't find what you're looking for? Contact our experts."
-        keywords="FAQs, Chartered Accountant, Tax Services, Bhubaneswar, ITR Filing, GST Compliance"
+        keywords="Swosti Consultancy, FAQs, Chartered Accountant, Tax Services, Bhubaneswar, ITR Filing, GST Compliance"
         canonical="/faqs"
         ogImage="/images/faqs-hero.jpg"
       />
