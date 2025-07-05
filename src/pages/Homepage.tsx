@@ -190,7 +190,7 @@ const Homepage: React.FC = () => {
           <p className="text-lg text-foreground mb-8 leading-relaxed">
             <strong>Swosti Consultancy</strong>  an associateship of Chartered Accountants and Advocates with over
             <strong> 27 years of experience</strong> in taxation, audit, and financial advisory services.
-            Since establishing our practice in <strong>1998</strong>, I have been committed to providing
+            Since establishment of the firm  in <strong>1998</strong>, We have been committed to providing
             professional, reliable, and personalized accounting solutions to individuals and businesses
             across Bhubaneshwar and beyond.
           </p>
