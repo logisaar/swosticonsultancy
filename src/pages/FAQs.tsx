@@ -339,13 +339,26 @@ const FAQs: React.FC = () => {
               </Button>
             </div>
           </section>
-           <div className="mt-10 text-center">
-            <Button variant="professional" size="lg" asChild>
+          <div className="mt-10 text-center">
+            {/* <Button variant="professional" size="lg" asChild>
               <Link to="/new-page">Go to New Page</Link>
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>
+      {/* User Blog Submission Form
+      <section className="mt-16 max-w-2xl mx-auto bg-muted/30 p-8 rounded-2xl text-center">
+        <h2 className="text-2xl font-bold text-primary mb-4">Share Your Knowledge!</h2>
+        <p className="text-muted-foreground mb-6">Have a tax tip, compliance story, or business experience to share? Submit your blog idea or article below. If selected, we’ll feature it on our site and credit you as the author!</p>
+        <form action="https://formspree.io/f/mnqewqzv" method="POST" className="space-y-4">
+          <input type="text" name="name" required placeholder="Your Name" className="w-full px-4 py-2 rounded border border-border" />
+          <input type="email" name="email" required placeholder="Your Email" className="w-full px-4 py-2 rounded border border-border" />
+          <input type="text" name="title" required placeholder="Blog Title" className="w-full px-4 py-2 rounded border border-border" />
+          <textarea name="content" required placeholder="Your Blog Content or Idea" rows={5} className="w-full px-4 py-2 rounded border border-border" />
+          <button type="submit" className="w-full bg-primary text-white py-2 rounded font-semibold hover:bg-primary-dark transition">Submit Blog</button>
+        </form>
+        <p className="text-xs text-muted-foreground mt-2">Submissions are reviewed before publishing. We may edit for clarity or length.</p>
+      </section> */}
     </>
   );
 };
