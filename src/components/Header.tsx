@@ -35,7 +35,7 @@ const Header: React.FC = () => {
             </div>
             <div>
               <h2 className="text-2xl lg:text-3xl font-bold text-primary">Swosti Consultancy</h2>
-              <p className="text-xs text-muted-foreground">Chartered Accountants</p>
+              <p className="text-xs text-muted-foreground">Chartered Accountants & Advocate</p>
             </div>
           </Link>
 
@@ -61,8 +61,8 @@ const Header: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
               <Phone className="w-4 h-4" />
-              <a href="tel:+919861035535" className="hover:text-primary transition-colors">
-                +91 98610 35535
+              <a href="tel:+917008519243" className="hover:text-primary transition-colors">
+                +91 7008519243
               </a>
             </div>
             <Button variant="cta" size="sm" asChild>

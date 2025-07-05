@@ -21,7 +21,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import ServiceCard from '@/components/ServiceCard';
 import TestimonialCard from '@/components/TestimonialCard';
 import LocationMap from '@/components/LocationMap';
-import abinashPortrait from '@/assets/abinash-mishra-portrait.jpg';
+import abinashPortrait from '@/assets/WhatsApp Image 2025-07-05 at 15.01.57_6564f2ac.jpg';
 import officeInterior from '@/assets/office-interior.jpg';
 import clientConsultation from '@/assets/client-consultation.jpg';
 
@@ -136,7 +136,7 @@ const Homepage: React.FC = () => {
             <div className="text-center lg:text-left">
               <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
                 Trusted Chartered Accountancy & 
-                <span className="text-ca-gold"> Tax Services</span>
+                <span className="text-ca-gold"> Advocate Services</span>
               </h1>
               <p className="text-xl lg:text-2xl mb-4 text-primary-foreground/90">
                 For Individuals and Businesses
@@ -188,7 +188,7 @@ const Homepage: React.FC = () => {
             Meet CA Abinash Mishra
           </h2>
           <p className="text-lg text-foreground mb-8 leading-relaxed">
-            I'm <strong>Abinash Mishra</strong>, a Chartered Accountant and ICAI Member with over 
+            I'm <strong>Abinash Mishra</strong>, a Chartered Accountants and Advocates  with over 
             <strong> 27 years of experience</strong> in taxation, audit, and financial advisory services. 
             Since establishing our practice in <strong>1998</strong>, I have been committed to providing 
             professional, reliable, and personalized accounting solutions to individuals and businesses 
