@@ -4,7 +4,7 @@ import { Award, Users, Target, Eye, Calendar, CheckCircle } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import abinashPortrait from '@/assets/abinash-mishra-portrait.jpg';
+import abinashPortrait from '@/assets/WhatsApp Image 2025-07-05 at 15.01.57_6564f2ac.jpg';
 import officeInterior from '@/assets/office-interior.jpg';
 
 
@@ -96,7 +96,7 @@ const About: React.FC = () => {
                   <div className="flex items-center space-x-3">
                     <Award className="w-8 h-8 text-ca-gold" />
                     <div>
-                      <p className="font-semibold text-primary">ICAI Certified</p>
+                      <p className="font-semibold text-primary">27 Years Experience</p>
                       <p className="text-sm text-muted-foreground">Professional Excellence</p>
                     </div>
                   </div>
