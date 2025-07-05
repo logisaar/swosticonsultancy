@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import SEO from "../components/Seo";
 import { Link } from 'react-router-dom';
 import { Calendar, User, ArrowRight, Search, Tag, Clock } from 'lucide-react';
@@ -6,10 +6,22 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
+import { Helmet } from 'react-helmet';
 
 const Blog: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [userBlogs, setUserBlogs] = useState<{name: string, content: string}[]>(() => {
+    // Load from localStorage on mount
+    try {
+      const stored = localStorage.getItem('userBlogs');
+      return stored ? JSON.parse(stored) : [];
+    } catch {
+      return [];
+    }
+  });
+  const [userName, setUserName] = useState('');
+  const [userContent, setUserContent] = useState('');
 
   const blogPosts = [
     {
@@ -104,25 +116,88 @@ const Blog: React.FC = () => {
 
   const categories = ['All', 'Tax Planning', 'GST', 'Business Registration', 'NRI Services', 'Compliance', 'Financial Advisory', 'Auditing'];
 
-  const filteredPosts = blogPosts.filter(post => {
+  // Combine user blogs and existing blogs for display
+  const allBlogs = [
+    ...userBlogs.map((blog, idx) => ({
+      id: `user-${idx}`,
+      title: blog.content.slice(0, 60) + (blog.content.length > 60 ? '...' : ''),
+      excerpt: blog.content,
+      category: 'User Submission',
+      author: blog.name,
+      date: new Date().toISOString().slice(0, 10),
+      readTime: 'User',
+      featured: false,
+      tags: ['User Blog']
+    })),
+    ...blogPosts.map(post => ({ ...post, tags: Array.isArray(post.tags) ? post.tags : [] }))
+  ];
+
+  const filteredPosts = allBlogs.filter(post => {
     const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
 
-  const featuredPosts = blogPosts.filter(post => post.featured);
-  const recentPosts = blogPosts.slice(0, 5);
+  // Use allBlogs for featured and recent posts as well
+  const featuredPosts = allBlogs.filter(post => post.featured);
+  const recentPosts = allBlogs.slice(0, 5);
+
+  // Persist userBlogs to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('userBlogs', JSON.stringify(userBlogs));
+  }, [userBlogs]);
 
   return (
     <>
-      <SEO 
-        title="Blog - Swosti Consultancy"
-        description="Explore our blog for the latest insights, tips, and updates on taxation, compliance, and financial management from our expert CA team."
-        keywords="Swosti Consultancy, Chartered Accountant Blog, Tax Tips, GST Updates, Business Registration, NRI Services"
-        canonical="/blog"
-        ogImage="/images/blog-hero.jpg"
+      <SEO
+        title="Blog - Swosti Consultancy | Tax, GST, Company Audit, Digital Signature, Labour, Professional Tax, ESI, EPF, TDS, Tax Refund"
+        description="Read expert articles and tips on income tax, GST, company audit, private limited, digital signature, labour law, professional tax, ESI, EPF, TDS, tax refund, and more from Swosti Consultancy, the best CA in Bhubaneswar."
+        keywords="Swosti Consultancy blog, tax tips, GST advice, company audit, digital signature, labour consultant, professional tax, ESI, EPF, TDS, tax refund, CA Bhubaneswar, Chartered Accountant Odisha"
+        canonical="https://www.swosticonsultancy.com/blog"
+        ogImage="/images/faqs-hero.jpg"
       />
+      {/* BlogPosting Schema.org Structured Data */}
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "@id": "https://www.swosticonsultancy.com/blog#blog",
+            "url": "https://www.swosticonsultancy.com/blog",
+            "name": "Swosti Consultancy Blog",
+            "description": "Expert articles and tips on income tax, GST, company audit, private limited, digital signature, labour law, professional tax, ESI, EPF, TDS, tax refund, and more from Swosti Consultancy, the best CA in Bhubaneswar.",
+            "blogPost": blogPosts.map(post => ({
+              "@type": "BlogPosting",
+              "headline": post.title,
+              "description": post.excerpt,
+              "author": {
+                "@type": "Person",
+                "name": post.author
+              },
+              "datePublished": post.date,
+              "url": `https://www.swosticonsultancy.com/blog/${post.id}`,
+              "keywords": post.tags.join(", ")
+            }))
+          })}
+        </script>
+      </Helmet>
+      {/* Internal Links for SEO */}
+      <div className="mb-8 text-center text-base text-muted-foreground">
+        <span>Explore our key services: </span>
+        <Link to="/services/taxation" className="text-primary underline mx-1">Income Tax Consultant</Link> |
+        <Link to="/services/gst" className="text-primary underline mx-1">GST Consultant</Link> |
+        <Link to="/services/auditing" className="text-primary underline mx-1">Company Audit</Link> |
+        <Link to="/services/business-registration" className="text-primary underline mx-1">Private Limited Registration</Link> |
+        <Link to="/services/digital-signature" className="text-primary underline mx-1">Digital Signature</Link> |
+        <Link to="/services/labour" className="text-primary underline mx-1">Labour Consultant</Link> |
+        <Link to="/services/professional-tax" className="text-primary underline mx-1">Professional Tax Consultant</Link> |
+        <Link to="/services/esi-epf" className="text-primary underline mx-1">ESI & EPF</Link> |
+        <Link to="/services/tds" className="text-primary underline mx-1">TDS Consultant</Link> |
+        <Link to="/services/tax-refund" className="text-primary underline mx-1">Tax Refund Consultant</Link> |
+        <Link to="/services/tax-refund" className="text-primary underline mx-1">Best CA in Bhubaneswar</Link> |
+        <Link to="/faqs" className="text-primary underline mx-1">FAQs</Link>
+      </div>
     <div className="min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
@@ -168,7 +243,7 @@ const Blog: React.FC = () => {
           {/* Main Content */}
           <div className="lg:col-span-2">
             {/* Featured Posts */}
-            {selectedCategory === 'All' && searchTerm === '' && (
+            {selectedCategory === 'All' && searchTerm === '' && featuredPosts.length > 0 && (
               <section className="mb-12">
                 <h2 className="text-2xl font-bold text-primary mb-6">Featured Articles</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -177,7 +252,7 @@ const Blog: React.FC = () => {
                       <CardHeader>
                         <div className="flex items-center justify-between mb-2">
                           <Badge variant="secondary">{post.category}</Badge>
-                          <Badge className="bg-ca-gold text-foreground">Featured</Badge>
+                          {post.featured && <Badge className="bg-ca-gold text-foreground">Featured</Badge>}
                         </div>
                         <CardTitle className="text-xl hover:text-primary transition-colors">
                           <Link to={`/blog/${post.id}`}>{post.title}</Link>
@@ -240,7 +315,7 @@ const Blog: React.FC = () => {
                             {post.excerpt}
                           </p>
                           <div className="flex flex-wrap gap-2 mb-4">
-                            {post.tags.map((tag) => (
+                            {post.tags && post.tags.map((tag) => (
                               <Badge key={tag} variant="secondary" className="text-xs">
                                 <Tag className="w-3 h-3 mr-1" />
                                 {tag}
@@ -350,6 +425,42 @@ const Blog: React.FC = () => {
               </Card>
             </div>
           </div>
+        </div>
+
+        {/* User Blog Submission Form */}
+        <div className="max-w-2xl mx-auto mb-10 bg-muted/30 p-6 rounded-2xl text-center">
+          <h2 className="text-xl font-bold text-primary mb-2">Share Your Blog</h2>
+          <form
+            onSubmit={e => {
+              e.preventDefault();
+              if (userName.trim() && userContent.trim()) {
+                setUserBlogs([{ name: userName, content: userContent }, ...userBlogs]);
+                setUserName('');
+                setUserContent('');
+              }
+            }}
+            className="space-y-3"
+          >
+            <input
+              type="text"
+              value={userName}
+              onChange={e => setUserName(e.target.value)}
+              placeholder="Your Name"
+              className="w-full px-4 py-2 rounded border border-border"
+              required
+            />
+            <textarea
+              value={userContent}
+              onChange={e => setUserContent(e.target.value)}
+              placeholder="Share your blog content..."
+              rows={4}
+              className="w-full px-4 py-2 rounded border border-border"
+              required
+            />
+            <button type="submit" className="w-full bg-primary text-white py-2 rounded font-semibold hover:bg-primary-dark transition">
+              Submit Blog
+            </button>
+          </form>
         </div>
 
         {/* CTA Section */}

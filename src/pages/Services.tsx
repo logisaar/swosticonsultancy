@@ -121,12 +121,12 @@ const Services: React.FC = () => {
 
   return (
     <>
-      <SEO 
-        title="Professional CA Services - Swosti Consultancy"
-        description="Explore our comprehensive Chartered Accountancy services including taxation, auditing, business registration, and financial advisory. Contact us for a free consultation."
-        keywords="Swosti Consultancy, Chartered Accountant, Tax Services, Bhubaneswar, ITR Filing, GST Compliance, Business Registration"
+      <SEO
+        title="CA Services in Bhubaneswar | Income Tax, GST, Audit, Digital Signature, Labour, Professional Tax, ESI, EPF, TDS, Tax Refund"
+        description="Explore our full range of Chartered Accountant services in Bhubaneswar: Income Tax, GST, Company Audit, Private Limited, Digital Signature, Labour Law, Professional Tax, ESI, EPF, TDS, Tax Refund, and more. Trusted by 500+ clients."
+        keywords="CA services Bhubaneswar, Income Tax Consultant, GST Consultant, Company Audit, Private Limited, Digital Signature, Labour Consultant, Professional Tax Consultant, ESI, EPF, Tax Consultant, TDS Consultant, Tax Refund Consultant, Chartered Accountant Odisha, Swosti Consultancy"
         canonical="/services"
-        ogImage="/images/services-hero.jpg"
+        ogImage="/images/faqs-hero.jpg"
       />
     <div className="min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

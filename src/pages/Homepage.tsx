@@ -120,12 +120,12 @@ const Homepage: React.FC = () => {
 
   return (
     <>
-      <SEO 
-        title="Homepage - Swosti Consultancy"
-        description="Professional Chartered Accountancy and Tax Services in Bhubaneshwar. Over 27 years of experience in taxation, audit, and business advisory."
-        keywords="Swosti Consultancy,Chartered Accountant, Tax Services, Bhubaneshwar, ITR Filing, GST Compliance, Business Registration"
+      <SEO
+        title="Best CA in Bhubaneswar | Income Tax Consultant, GST Consultant, Company Audit, Digital Signature, Labour Consultant, Professional Tax, ESI, EPF, TDS, Tax Refund"
+        description="Swosti Consultancy is the best CA in Bhubaneswar, Odisha. Expert Chartered Accountant services: Income Tax, GST Registration, TDS Return, Digital Signature, Labour Law, Professional Tax, ESI, EPF, Tax Refund, and more. 27+ years experience."
+        keywords="Best CA in Bhubaneswar, Income Tax Consultant, GST Consultant, Company Audit, Private Limited, Digital Signature, Labour Consultant, Professional Tax Consultant, ESI, EPF, Tax Consultant, TDS Consultant, Tax Refund Consultant, Chartered Accountant Odisha, Swosti Consultancy"
         canonical="/"
-        ogImage="/images/abinash-mishra-portrait.jpg"
+        ogImage="/images/faqs-hero.jpg"
       />
     <div className="min-h-screen">
       {/* Hero Section */}

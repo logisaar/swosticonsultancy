@@ -96,13 +96,13 @@ const Contact: React.FC = () => {
 
   return (
     <>
-    <SEO 
-      title="Contact Us - Swosti Consultancy"
-      description="Get in touch with our expert team for professional Chartered Accountancy services. We're here to help you with all your financial needs."
-      keywords="Swosti Consultancy, Contact CA, Chartered Accountant Bhubaneswar, Tax Services, Financial Advisory, NRI Services"
-      canonical="/contact"
-      ogImage="/images/contact-hero.jpg"
-    />
+      <SEO
+        title="Contact Swosti Consultancy | Best CA in Bhubaneswar | Chartered Accountant Odisha"
+        description="Contact Swosti Consultancy, the best CA in Bhubaneswar, Odisha for expert Chartered Accountant services: Income Tax, GST, Company Audit, Digital Signature, Labour Law, Professional Tax, ESI, EPF, TDS, Tax Refund, and more."
+        keywords="Contact Swosti Consultancy, CA Bhubaneswar, Chartered Accountant Odisha, Income Tax Consultant, GST Consultant, Company Audit, Digital Signature, Labour Consultant, Professional Tax, ESI, EPF, TDS, Tax Refund"
+        canonical="/contact"
+        ogImage="/images/faqs-hero.jpg"
+      />
     <div className="min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
