@@ -59,18 +59,15 @@ const Contact: React.FC = () => {
       icon: Phone,
       title: 'Phone Numbers',
       details: [
-        '+91 84015 39713 (Primary)',
-        '+91 674 2345678 (Office)',
-        'WhatsApp: +91 84015 39713'
+        '+91 9861035535 (Primary)',
+        'WhatsApp: +91 9861035535'
       ]
     },
     {
       icon: Mail,
       title: 'Email Addresses',
       details: [
-        'contact@abinashmishra.co',
-        'info@abinashmishra.co',
-        'support@abinashmishra.co'
+        'abinashmishra70@gmail.com',
       ]
     },
     {
@@ -97,7 +94,7 @@ const Contact: React.FC = () => {
   return (
     <>
       <SEO
-        title="Contact Swosti Consultancy "
+        title="Swosti Consultancy"
         description="Contact Swosti Consultancy, the best CA in Bhubaneswar, Odisha for expert Chartered Accountant services: Income Tax, GST, Company Audit, Digital Signature, Labour Law, Professional Tax, ESI, EPF, TDS, Tax Refund, and more."
         keywords="Contact Swosti Consultancy, CA Bhubaneswar, Chartered Accountant Odisha, Income Tax Consultant, GST Consultant, Company Audit, Digital Signature, Labour Consultant, Professional Tax, ESI, EPF, TDS, Tax Refund"
         canonical="/contact"
@@ -281,7 +278,7 @@ const Contact: React.FC = () => {
                 <h3 className="text-xl font-semibold text-primary mb-2">Call Now</h3>
                 <p className="text-muted-foreground mb-4">Speak directly with our experts</p>
                 <Button variant="success" asChild>
-                  <a href="tel:+918401539713">+91 84015 39713</a>
+                  <a href="tel:+919861035535">+91 9861035535</a>
                 </Button>
               </CardContent>
             </Card>
@@ -294,7 +291,7 @@ const Contact: React.FC = () => {
                 <h3 className="text-xl font-semibold text-primary mb-2">WhatsApp</h3>
                 <p className="text-muted-foreground mb-4">Chat with us instantly</p>
                 <Button variant="success" asChild>
-                  <a href="https://wa.me/918401539713" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/919861035535" target="_blank" rel="noopener noreferrer">
                     Message Us
                   </a>
                 </Button>

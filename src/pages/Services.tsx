@@ -122,7 +122,7 @@ const Services: React.FC = () => {
   return (
     <>
       <SEO
-        title="Service - Swosti Consultancy"
+        title="Swosti Consultancy"
         description="Explore our full range of Chartered Accountant services in Bhubaneswar: Income Tax, GST, Company Audit, Private Limited, Digital Signature, Labour Law, Professional Tax, ESI, EPF, TDS, Tax Refund, and more. Trusted by 500+ clients."
         keywords="CA services Bhubaneswar, Income Tax Consultant, GST Consultant, Company Audit, Private Limited, Digital Signature, Labour Consultant, Professional Tax Consultant, ESI, EPF, Tax Consultant, TDS Consultant, Tax Refund Consultant, Chartered Accountant Odisha, Swosti Consultancy"
         canonical="/services"

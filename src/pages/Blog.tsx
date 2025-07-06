@@ -151,7 +151,7 @@ const Blog: React.FC = () => {
   return (
     <>
       <SEO
-        title="Blog - Swosti Consultancy "
+        title="Swosti Consultancy"
         description="Read expert articles and tips on income tax, GST, company audit, private limited, digital signature, labour law, professional tax, ESI, EPF, TDS, tax refund, and more from Swosti Consultancy, the best CA in Bhubaneswar."
         keywords="Swosti Consultancy blog, tax tips, GST advice, company audit, digital signature, labour consultant, professional tax, ESI, EPF, TDS, tax refund, CA Bhubaneswar, Chartered Accountant Odisha"
         canonical="https://www.swosticonsultancy.com/blog"

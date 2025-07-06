@@ -34,7 +34,7 @@ const About: React.FC = () => {
   return (
     <>
       <SEO
-        title="About Swosti Consultancy"
+        title="Swosti Consultancy"
         description="Learn about CA Abinash Mishra, the best CA in Bhubaneswar, Odisha. 27+ years of experience in Income Tax, GST, Company Audit, Digital Signature, Labour Law, Professional Tax, ESI, EPF, TDS, and Tax Refund services."
         keywords="About Swosti Consultancy, CA Bhubaneswar, Chartered Accountant Odisha, Income Tax Consultant, GST Consultant, Company Audit, Digital Signature, Labour Consultant, Professional Tax, ESI, EPF, TDS, Tax Refund"
         canonical="/about"
@@ -45,7 +45,7 @@ const About: React.FC = () => {
           {/* Hero Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl lg:text-5xl font-bold text-primary mb-6">
-              About Abinash Mishra & Co.
+              Swosti Consultancy
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Your trusted partner in financial excellence with over two decades of 

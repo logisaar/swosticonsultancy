@@ -62,7 +62,7 @@ const Header: React.FC = () => {
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
               <Phone className="w-4 h-4" />
               <a href="tel:+917008519243" className="hover:text-primary transition-colors">
-                +91 7008519243
+                +91 9861035535
               </a>
             </div>
             <Button variant="cta" size="sm" asChild>

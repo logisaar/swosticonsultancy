@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
             {/* Social Links */}
             <div className="flex space-x-4">
               <a
-                href="https://linkedin.com/company/abinash-mishra-co"
+                href="https://www.linkedin.com/in/abinash-mishra-5490858a/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-300"
@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="https://www.facebook.com/abinashmishraca/"
+                href="https://www.facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-300"
@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="https://www.instagram.com/abinashmishraca/"
+                href="https://www.instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors duration-300"
@@ -173,7 +173,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-background/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-background/70 text-sm">
-              © 2024 Abinash Mishra & Co. All rights reserved. | ICAI Registration: 123456
+              © 2025 Swosti Consultancy All rights reserved. 
             </div>
             <div className="flex space-x-6">
               {legalLinks.map((link) => (

@@ -106,7 +106,7 @@ const FAQs: React.FC = () => {
   return (
     <>
       <SEO 
-        title="FAQs - Swosti Consultancy"
+        title="Swosti Consultancy"
         description="Find answers to common questions about income tax, GST, company audit, private limited, digital signature, labour consultancy, professional tax, ESI, EPF, TDS, tax refund, and more. Swosti Consultancy is the best CA in Bhubaneswar. Contact our experts for personalized help."
         keywords="Best CA in Bhubaneswar, Income Tax Consultant, GST Consultant, Company Audit, Private Limited, Digital Signature, Labour Consultant, Professional Tax Consultant, ESI, EPF, Tax Consultant, TDS Consultant, Tax Refund Consultant, Chartered Accountant Odisha, Swosti Consultancy"
         canonical="https://www.swosticonsultancy.com/faqs"
