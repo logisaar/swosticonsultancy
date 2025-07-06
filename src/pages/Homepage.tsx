@@ -136,10 +136,10 @@ const Homepage: React.FC = () => {
             <div className="text-center lg:text-left">
               <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
                 Trusted Chartered Accountancy & 
-                <span className="text-ca-gold"> Advocate Services</span>
+                <span className="text-ca-gold">Advocate Services</span>
               </h1>
               <p className="text-xl lg:text-2xl mb-4 text-primary-foreground/90">
-                For Individuals and Businesses
+                For Individuals and Businesses 
               </p>
               <p className="text-lg mb-8 text-primary-foreground/80 leading-relaxed">
                 Professional financial expertise with 27 years of experience in taxation, 
@@ -170,7 +170,7 @@ const Homepage: React.FC = () => {
                   <div className="flex items-center space-x-2">
                     <Award className="w-6 h-6 text-ca-gold" />
                     <div>
-                      <p className="font-semibold text-sm">ICAI Certified</p>
+                      <p className="font-semibold text-sm">27 Years Experience</p>
                       <p className="text-xs text-muted-foreground">Member Since 1998</p>
                     </div>
                   </div>
@@ -185,13 +185,13 @@ const Homepage: React.FC = () => {
       <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">
-            Meet CA Abinash Mishra
+            Swosti Consultancy
           </h2>
           <p className="text-lg text-foreground mb-8 leading-relaxed">
-            I'm <strong>Abinash Mishra</strong>, a Chartered Accountants and Advocates  with over 
-            <strong> 27 years of experience</strong> in taxation, audit, and financial advisory services. 
-            Since establishing our practice in <strong>1998</strong>, I have been committed to providing 
-            professional, reliable, and personalized accounting solutions to individuals and businesses 
+            <strong>Swosti Consultancy</strong>  an associateship of Chartered Accountants and Advocates with over
+            <strong> 27 years of experience</strong> in taxation, audit, and financial advisory services.
+            Since establishment of the firm  in <strong>1998</strong>, We have been committed to providing
+            professional, reliable, and personalized accounting solutions to individuals and businesses
             across Bhubaneshwar and beyond.
           </p>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
