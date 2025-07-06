@@ -568,7 +568,7 @@ const ServiceDetail: React.FC = () => {
   return (
     <>
       <SEO 
-        title={`${service.title} - Professional CA Services in Bhubaneswar`}
+        title={`${service.title} `}
         description={service.description}
         keywords={`${service.title}, CA Services, Bhubaneswar, Chartered Accountant,Swosti Consultancy ${service.subtitle}`}
         canonical={`/services/${serviceId}`}

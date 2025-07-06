@@ -124,7 +124,7 @@ const Testimonials: React.FC = () => {
   return (
     <>
       <SEO
-        title="Client Testimonials - Best CA in Bhubaneswar | Swosti Consultancy"
+        title="Testimonials - Swosti Consultancy"
         description="Read real client testimonials and reviews for Swosti Consultancy, the best CA in Bhubaneswar. See how we help clients with income tax, GST, company audit, digital signature, labour law, professional tax, ESI, EPF, TDS, tax refund, and more."
         keywords="Swosti Consultancy reviews, client testimonials, CA Bhubaneswar, best CA Odisha, income tax consultant, GST consultant, company audit, digital signature, labour consultant, professional tax, ESI, EPF, TDS, tax refund"
         canonical="/testimonials"

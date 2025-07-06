@@ -121,7 +121,7 @@ const Homepage: React.FC = () => {
   return (
     <>
       <SEO
-        title="Best CA in Bhubaneswar | Income Tax Consultant, GST Consultant, Company Audit, Digital Signature, Labour Consultant, Professional Tax, ESI, EPF, TDS, Tax Refund"
+        title="Swosti Consultancy"
         description="Swosti Consultancy is the best CA in Bhubaneswar, Odisha. Expert Chartered Accountant services: Income Tax, GST Registration, TDS Return, Digital Signature, Labour Law, Professional Tax, ESI, EPF, Tax Refund, and more. 27+ years experience."
         keywords="Best CA in Bhubaneswar, Income Tax Consultant, GST Consultant, Company Audit, Private Limited, Digital Signature, Labour Consultant, Professional Tax Consultant, ESI, EPF, Tax Consultant, TDS Consultant, Tax Refund Consultant, Chartered Accountant Odisha, Swosti Consultancy"
         canonical="/"

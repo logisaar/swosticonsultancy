@@ -97,7 +97,7 @@ const Contact: React.FC = () => {
   return (
     <>
       <SEO
-        title="Contact Swosti Consultancy | Best CA in Bhubaneswar | Chartered Accountant Odisha"
+        title="Contact Swosti Consultancy "
         description="Contact Swosti Consultancy, the best CA in Bhubaneswar, Odisha for expert Chartered Accountant services: Income Tax, GST, Company Audit, Digital Signature, Labour Law, Professional Tax, ESI, EPF, TDS, Tax Refund, and more."
         keywords="Contact Swosti Consultancy, CA Bhubaneswar, Chartered Accountant Odisha, Income Tax Consultant, GST Consultant, Company Audit, Digital Signature, Labour Consultant, Professional Tax, ESI, EPF, TDS, Tax Refund"
         canonical="/contact"

@@ -34,7 +34,7 @@ const About: React.FC = () => {
   return (
     <>
       <SEO
-        title="About Swosti Consultancy | Best CA in Bhubaneswar | Chartered Accountant Odisha"
+        title="About Swosti Consultancy"
         description="Learn about CA Abinash Mishra, the best CA in Bhubaneswar, Odisha. 27+ years of experience in Income Tax, GST, Company Audit, Digital Signature, Labour Law, Professional Tax, ESI, EPF, TDS, and Tax Refund services."
         keywords="About Swosti Consultancy, CA Bhubaneswar, Chartered Accountant Odisha, Income Tax Consultant, GST Consultant, Company Audit, Digital Signature, Labour Consultant, Professional Tax, ESI, EPF, TDS, Tax Refund"
         canonical="/about"
