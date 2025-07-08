@@ -8,9 +8,9 @@ import Homepage from "./pages/Homepage";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import ServiceDetail from "./pages/ServiceDetail";
-// import Testimonials from "./pages/Testimonials";
-// import Blog from "./pages/Blog";
-// import FAQs from "./pages/FAQs";
+import Testimonials from "./pages/Testimonials";
+import Blog from "./pages/Blog";
+import FAQs from "./pages/FAQs";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 // import NextPage from './pages/NextPage';
@@ -29,9 +29,9 @@ const App = () => (
             <Route path="about" element={<About />} />
             <Route path="services" element={<Services />} />
             <Route path="services/:serviceId" element={<ServiceDetail />} />
-            {/* <Route path="testimonials" element={<Testimonials />} /> */}
-            {/* <Route path="blog" element={<Blog />} /> */}
-            {/* <Route path="faqs" element={<FAQs />} /> */}
+            <Route path="testimonials" element={<Testimonials />} />
+            <Route path="blog" element={<Blog />} />
+            <Route path="faqs" element={<FAQs />} />
             <Route path="contact" element={<Contact />} />
             {/* <Route path="/new-page" element={<NextPage />} /> */}
           </Route>
